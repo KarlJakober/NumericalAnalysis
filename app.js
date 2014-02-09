@@ -14,6 +14,7 @@ var expressValidator = require('express-validator');
  */
 
 var homeController = require('./controllers/home');
+var projectzeroController = require('./controllers/projectzero');
 
 /**
  * Create Express server.
@@ -78,6 +79,8 @@ app.use(express.errorHandler());
  */
 
 app.get('/', homeController.index);
+app.get('/projectzero', projectzeroController.index);
+
 
 app.listen(app.get('port'), function() {
   console.log("✔ Express server listening on port %d in %s mode", app.get('port'), app.settings.env);

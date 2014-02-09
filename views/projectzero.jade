@@ -2,4 +2,100 @@ extends layout
 
 block content
   h1 Project Zero
-  
+  #container.content
+    .row
+      .col-md-4
+        h3 Matrix A Size
+        input(type="text", id="m" size="3" maxLength="3" class="matrixdef" value="4")
+        | x
+        input(type="text", id="n1" size="3" maxLength="3" class="matrixdef" value="2")
+      .col-md-4
+        h3 Matrix B Size
+        input(type="text", id="n2" size="3" maxLength="3" class="matrixdef" value="2")
+        | x
+        input(type="text", id="l" size="3" maxLength="3" class="matrixdef" value="3")
+      .col-md-4
+    .row
+      | &nbsp;
+    .row
+      .col-md-2
+        h1 A
+      .col-md-10
+        table.matrix#matrix1
+          tr
+            td
+              input(type="text", size="3" value="1" class="matrixInput")
+            td
+              input(type="text", size="3" value="2" class="matrixInput")
+          tr
+            td
+              input(type="text", size="3" value="4" class="matrixInput")
+            td
+              input(type="text", size="3" value="5" class="matrixInput")
+          tr
+            td
+              input(type="text", size="3" value="6" class="matrixInput")
+            td
+              input(type="text", size="3" value="7" class="matrixInput")
+          tr
+            td
+              input(type="text", size="3" value="-6" class="matrixInput")
+            td
+              input(type="text", size="3" value="2" class="matrixInput")
+    .row
+      | &nbsp;
+    .row
+      .col-md-2
+        h1 B
+      .col-md-10
+        table.matrix#matrix2
+          tr
+            td
+              input(type="text", size="3" value="5" class="matrixInput")
+            td
+              input(type="text", size="3" value="3" class="matrixInput")
+            td
+              input(type="text", size="3" value="2" class="matrixInput")
+          tr
+            td
+              input(type="text", size="3" value="3" class="matrixInput")
+            td
+              input(type="text", size="3" value="4" class="matrixInput")
+            td
+              input(type="text", size="3" value="7" class="matrixInput")
+    .row
+      | &nbsp;
+    .row
+      .col-md-2
+        h1 Output
+      .col-md-10
+        .finalMatrix
+          table.matrix#finalMatrix
+            tr
+              td
+                | 11
+              td
+                | 11
+              td
+                | 16
+            tr
+              td
+                | 35
+              td
+                | 32
+              td
+                | 43
+            tr
+              td
+                | 51
+              td
+                | 46
+              td
+                | 61
+            tr
+              td
+                | -24
+              td
+                | -10
+              td
+                | 2
